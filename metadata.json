@@ -1,0 +1,5 @@
+{
+  "name": "ARB Management POS",
+  "description": "Secure, device-locked Point of Sale system with advanced debt management and Google Sheets backend.",
+  "requestFramePermissions": []
+}
