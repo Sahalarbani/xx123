@@ -78,10 +78,33 @@ If you prefer to create them manually, create these Tabs with Row 1 as headers:
     *   Find the line: `const API_URL = '...';`
     *   Replace the URL with the **Web App URL** you obtained in Part 1.
 
-2.  **Hosting the Website:**
-    *   You can host the frontend files (`index.html`, `index.tsx`, etc.) on any static hosting provider.
-    *   **Recommended:** GitHub Pages, Vercel, Netlify, or Firebase Hosting.
-    *   Since this app uses ES Modules and CDNs (no build step required), you can technically just open `index.html` locally, but for production, use a host.
+2.  **Run Locally or Build:**
+    *   If using Vite/Create React App, run `npm install` and `npm run dev`.
+    *   To build for production, run `npm run build`.
+
+---
+
+### 🌐 Hosting on Vercel
+
+**English Instructions:**
+1.  **Source Code:** Push your code to a Git repository (GitHub, GitLab, or Bitbucket).
+2.  **Vercel Dashboard:** Log in to [vercel.com](https://vercel.com) and click **"Add New Project"**.
+3.  **Import:** Select your repository.
+4.  **Configuration:**
+    *   **Framework Preset:** Vercel usually detects this automatically (e.g., Vite, Create React App).
+    *   If auto-detection fails, set the **Build Command** (e.g., `npm run build`) and **Output Directory** (e.g., `dist` or `build`) manually.
+5.  **Environment Variables:** If you have any secrets, add them in the Environment Variables section.
+6.  **Deploy:** Click **Deploy**. Your app is now live!
+
+**Panduan Bahasa Indonesia:**
+1.  **Source Code:** Upload kode Anda ke repository Git (GitHub, GitLab, atau Bitbucket).
+2.  **Dashboard Vercel:** Masuk ke [vercel.com](https://vercel.com) dan klik **"Add New Project"**.
+3.  **Import:** Pilih repository Anda.
+4.  **Konfigurasi:**
+    *   **Framework Preset:** Vercel biasanya mendeteksi ini secara otomatis (contoh: Vite, Create React App).
+    *   Jika deteksi otomatis gagal, atur **Build Command** (misal: `npm run build`) dan **Output Directory** (misal: `dist` atau `build`) secara manual.
+5.  **Environment Variables:** Jika Anda memiliki data rahasia, tambahkan di bagian Environment Variables.
+6.  **Deploy:** Klik **Deploy**. Aplikasi Anda sudah online!
 
 ---
 
@@ -140,7 +163,7 @@ If you prefer to create them manually, create these Tabs with Row 1 as headers:
 ## ❓ Troubleshooting
 
 **Q: The screen is white / preview not loading.**
-A: Ensure your internet is active (it loads React from CDN). If hosting, ensure your server supports `.tsx` or pre-compile it. *Note: The current `index.html` is set up for browser-native ES module compilation via `esm.sh`.*
+A: Ensure your internet is active (it loads React from CDN). If using a specific build tool, ensure dependencies are installed.
 
 **Q: "ScriptError: Authorization is required"**
 A: You (the owner) must run the script once manually in the editor or redeploy. Ensure "Who has access" is set to "Anyone".
